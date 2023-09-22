@@ -1,0 +1,9 @@
+@media (max-width:500px){
+    .container{
+        margin-bottom: 2rem;
+        height: 20%;
+        width: 90%;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+}
