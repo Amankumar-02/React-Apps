@@ -8,9 +8,9 @@ function App() {
 
   return (
     <>
-    <h1>Todo List Using React Redux-Toolkit</h1>
+    <h1 className='text-white text-3xl'>Todo List Using React Redux-Toolkit</h1>
     <TodoInput/>
-    <div className="mt-5">Todos</div>
+    <div className="mt-5 text-white text-xl">Todos</div>
     {/* <TodoList/> */}
     {storeTodo.map((todo)=>(
       <div key={todo.id}>

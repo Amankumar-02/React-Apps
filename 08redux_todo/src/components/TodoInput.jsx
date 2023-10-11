@@ -7,6 +7,8 @@ function TodoInput(){
     let dispatch = useDispatch()
     const submit = (e)=>{
         e.preventDefault()
+        // dispatch(addTodo(input))
+        if(!input) return
         dispatch(addTodo(input))
         setInput('')
     }
