@@ -16,6 +16,10 @@ export const todoSlice = createSlice({
             state.todos.unshift(newTodo)
             localStorage.setItem('todos', JSON.stringify(state.todos))
         },
+        updateTodo: (state, action)=>{
+            state.todos = state.todos.map((prevTodo)=>prevTodo.id === action.payload.id? {...prevTodo, text:action.payload.text} : prevTodo)
+            localStorage.setItem('todos', JSON.stringify(state.todos))
+        },
         removeTodo : (state, action)=>{
             state.todos = state.todos.filter((prevTodo)=> prevTodo.id !== action.payload)
             localStorage.setItem('todos', JSON.stringify(state.todos))
@@ -23,6 +27,6 @@ export const todoSlice = createSlice({
     }
 })
 
-export const {addTodo, removeTodo} = todoSlice.actions
+export const {addTodo, updateTodo, removeTodo} = todoSlice.actions
 
 export default todoSlice.reducer
